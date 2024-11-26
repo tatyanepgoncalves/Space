@@ -1,0 +1,182 @@
+@use "./variables" as h;
+
+.home {
+  background-image: h.$bgHomeMobile;
+  padding-top: 11rem;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8.1rem;
+  }
+}
+
+.text-home {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+
+  h1 {
+    color: h.$white;
+    font-family: h.$Bellefair;
+    font-size: 8rem;
+    font-weight: 400;
+    line-height: 10rem;
+  }
+  
+  h1, span {
+    text-transform: uppercase;
+  }
+  
+  span {
+    font-size: 1.6rem;
+    font-family: h.$BarlowCondensed;
+    letter-spacing: 0.27rem;
+  }
+  
+  span, p {
+    color: h.$blue;
+  }
+  
+  p {
+    font-family: h.$Barlow;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+}
+
+
+.circle-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 20rem;
+  height: 20rem;
+  transition: all 0.5s;
+
+  .circle {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: h.$white;
+    
+    h2 {
+      color: h.$black;
+      font-family: h.$Bellefair;
+      text-transform: uppercase;
+      font-size: 2rem;
+      letter-spacing: 0.125rem;
+    }
+  }
+}
+
+
+.circle-box:hover {
+  width: 30rem;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+@media (width >= 768px) {
+  .home {
+    padding-top: 17rem;
+    background-image: h.$bgHomeTablet;
+  }
+
+
+  .text-home {
+    gap: 2.4rem;
+
+    span {
+      font-size: 2rem;
+      letter-spacing: 0.336rem;
+    }
+
+    h1 {
+      font-size: 15rem;
+      line-height: 15rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  .circle-box {
+    height: 24rem;
+    width: 24rem;
+
+    .circle {
+      height: 24rem;
+      width: 24rem;
+    }
+  }
+
+  .circle-box:hover {
+    width: 35rem;
+    height: 35rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .home {
+    background-image: h.$bgHomeDesktop;
+
+    .container {
+      flex-direction: row;
+      padding: 0;
+      justify-content: space-between;
+    }
+  }
+
+
+  .text-home {
+    max-width: 38%;
+    text-align: left;
+
+    span {
+      font-size: 2.8rem;
+      letter-spacing: 0.472rem;
+    }
+
+    h1 {
+      font-size: 15rem;
+      line-height: auto;
+    }
+
+    p {
+      font-size: 1.8rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  .circle-box {
+    width: 24.7rem;
+    height: 24.7rem;
+
+    .circle {
+      width: 24.7rem;
+      height: 24.7rem;
+
+      h2 {
+        font-size: 3.2rem;
+        letter-spacing: 0.2rem;
+      }
+    }
+
+    &:hover {
+      width: 40rem;
+      height: 40rem;
+    }
+  }
+}
