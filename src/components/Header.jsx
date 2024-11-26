@@ -43,7 +43,7 @@ export default function Header() {
             </button>
             <ul className="nav-links">
               <li>
-                <NavLink to="/" className={({ isActive }) => (isActive) ? "active" : ""}>
+                <NavLink to="/" cl>
                   <span>00</span>
                   <p>Home</p>
                 </NavLink>
