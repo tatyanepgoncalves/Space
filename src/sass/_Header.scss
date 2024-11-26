@@ -14,6 +14,8 @@ header {
   }
 }
 
+
+
 .nav {
   display: none;
   position: fixed;
@@ -73,6 +75,50 @@ header {
   a {
     &.active {
       border-right: 0.3rem solid h.$white;
+    }
+  }
+}
+
+.navbar {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .nav, .btn-open  {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+    .navbar-links {
+      display: flex;
+      gap: 3.9rem;
+
+      li {
+        a {
+          display: flex;
+          align-items: center;
+          color: h.$white;
+          font-family: h.$BarlowCondensed;
+          text-transform: uppercase;
+          font-size: 1.4rem;
+          letter-spacing: 0.236rem;
+          padding: 3.7rem 0;
+          transition: border-bottom 0.3s;
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-links {
+    a {
+      &.active, &:hover {
+        border-bottom: 0.3rem solid h.$white;
+      }
     }
   }
 }
