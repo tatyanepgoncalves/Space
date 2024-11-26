@@ -68,6 +68,35 @@ export default function Header() {
               </li>
             </ul>
           </nav>
+
+          <nav className={`navbar ${isMenuOpen ? "active" : "" }`}>
+            <ul className="navbar-links">
+              <li>
+                <NavLink to="/" className={({ isActive }) => (isActive) ? "active" : ""}>
+                  <span>00</span>
+                  <p>Home</p>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/destination" className={({ isActive }) => (isActive) ? "active" : ""}>
+                  <span>01</span>
+                  <p>Destination</p>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/crew" className={({ isActive }) => (isActive) ? "active" : ""}>
+                  <span>02</span>
+                  <p>Crew</p>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink  to="/technology" className={({ isActive }) => (isActive) ? "active" : ""}>
+                  <span>03</span>
+                  <p>Technology</p>
+                </NavLink>
+              </li>
+            </ul>
+          </nav>
         </div>
 
 
