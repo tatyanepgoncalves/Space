@@ -1,0 +1,252 @@
+@use "./variables" as c;
+
+.crew-items {
+  display: flex;
+}
+
+.menu-crew {
+  display: flex;
+  gap: 1.6rem;
+
+  li {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: all 0.5s;
+    
+    &.active {
+      background-color: c.$white;
+    }
+
+    &:hover {
+      background-color: c.$white;
+    }
+  }
+}
+
+.text-crew {
+  display: flex;
+}
+
+.text-box {
+  display: flex;
+
+  span, h3 {
+    text-transform: uppercase;
+    font-family: c.$Bellefair;
+
+  }
+
+  span {
+    color: rgba(255, 255, 255, 0.49);
+  }
+
+  h3 {
+    color: c.$white;
+  }
+
+  p {
+    color: c.$blue;
+    font-family: c.$Barlow;
+  }
+}
+
+.id {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width <= 767px) {
+  .crew {
+    background-image: c.$BgCrewMobile;
+    padding-top: 11rem;
+
+    .container {
+      padding: 0;
+    }
+  }
+
+  .crew-items {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 32.7rem;
+  }
+
+  .images-crew {
+    margin: 3.2rem 0 3.5rem;
+    source, img {
+      width: 15rem;
+    }
+  }
+
+  .menu-crew {
+    margin-bottom: 3.2rem;
+  }
+
+  .menu-crew.bottom {
+    display: none;
+  }
+
+  .text-crew {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text-box {
+    flex-direction: column;
+    gap: 1.6rem;
+
+    
+    p {
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+    }
+  }
+  
+  .id {
+    gap: .8rem;
+    
+    span {
+      font-size: 1.6rem;
+    }
+  
+    h3 {
+      font-size: 2.4rem;
+    }
+  }
+
+}
+
+@media (width >= 768px) {
+  .crew {
+    background-image: c.$BgCrewTablet;
+    padding-top: 17rem;
+  }
+
+  .title-page {
+    margin-bottom: 6rem;
+
+    span,h2 {
+      font-size: 2rem;
+      line-height: 0.338rem;
+    }
+  }
+
+  .crew-items {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 52rem;
+    gap: 4rem;
+  }
+
+  .text-crew, .text-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .text-crew {
+    gap: 4rem;
+  }
+
+  .menu-crew.top {
+    display: none;
+  }
+
+  .menu-crew.bottom {
+    display: flex;
+  }
+
+  .text-box {
+    gap: 1.6rem;
+
+    p {
+      font-size: 1.6rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  .id {
+    gap: .8rem;
+
+    span {
+      font-size: 2.4rem;
+    }
+
+    h3 {
+      font-size: 4rem;
+    }
+  }
+
+  .images-crew {
+    source, img {
+      width: 37rem;
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .crew {
+    background-image: c.$BgCrewDesktop;
+    padding: 8rem;
+
+    .container {
+      padding: 0;
+    }
+  }
+
+  .title-page {
+    margin: 0;
+
+    span, h2 {
+      font-size: 2.8rem;
+      letter-spacing: 0.472rem;
+      line-height: normal;
+    }
+  }
+
+  .crew-items {
+    width: 111.3rem;
+    flex-direction: row-reverse;
+    gap: 8rem;
+  }
+
+  .text-crew, .text-box {
+    text-align: left;
+    align-items: start;
+  }
+
+  .text-box {
+    gap: 2.1rem;
+
+    p {
+      font-size: 1.8rem;
+      line-height: 3.2rem;
+    }
+  }
+
+  .id {
+    gap: 2.1rem;
+    
+    span {
+      font-size: 3.2rem;
+    }
+
+    h3 {
+      font-size: 5.6rem;
+    }
+  }
+  
+  .images-crew {
+    source, img {
+      width: 34rem;
+    }
+  }
+}
